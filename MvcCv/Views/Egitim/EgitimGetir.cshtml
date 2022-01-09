@@ -1,0 +1,31 @@
+﻿@model MvcCv.Models.Entity.TblEgitim
+@{
+    ViewBag.Title = "EgitimGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h4>Egitim Güncelleme Sayfası</h4>
+<br />
+<form method="post">
+
+    @Html.Label("Egitim Id")
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
+    <br />
+    @Html.Label("Okul Adı")
+    @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+    <br />
+    @Html.Label("Fakülte Adı")
+    @Html.TextBoxFor(x => x.AltBaslik1, new { @class = "form-control" })
+    <br />
+    @Html.Label("Bölüm Adı")
+    @Html.TextBoxFor(x => x.AltBaslik2, new { @class = "form-control" })
+    <br /> @Html.Label("Gno")
+    @Html.TextBoxFor(x => x.GNO, new { @class = "form-control" })
+    <br /> @Html.Label("Tarih")
+    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Güncelle</button>
+</form>
+
+

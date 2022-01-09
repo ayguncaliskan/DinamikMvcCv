@@ -1,0 +1,26 @@
+﻿@model MvcCv.Models.Entity.TblEgitim
+@{
+    ViewBag.Title = "EgitimEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h4>Yeni Egitim Ekleme Sayfası</h4>
+<br />
+<form method="post">
+
+    <input type="text" name="Baslik" class="form-control" placeholder="Okul Adını Giriniz" />
+    @Html.ValidationMessageFor(x => x.Baslik, "", new { @style = "color:red" })
+    <br />
+    <input type="text" name="AltBaslik1" class="form-control" placeholder="Fakülte Giriniz" />
+    <br />
+    <input type="text" name="AltBaslik2" class="form-control" placeholder="Bölüm Giriniz" />
+    <br />
+    <input type="text" name="GNO" class="form-control" placeholder="Not Ortalamanızı giriniz" />
+    @Html.ValidationMessageFor(x => x.GNO, "", new { @style = "color:blue" })
+    <br />
+    <input type="text" name="Tarih" class="form-control" placeholder="Tarih Giriniz" />
+    <br />
+    <button class="btn btn-info">Kaydet</button>
+</form>
+
